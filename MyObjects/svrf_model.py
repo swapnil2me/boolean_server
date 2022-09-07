@@ -277,54 +277,6 @@ class SVRF:
                 write_tree_in_list(var_expr['expression_tree'], line_list, name=var_name)
                 line_list.append("</div>")
         line_list.append("</body>")
-        line_list.append("""<style>
-                            .level_0 {
-                              display: flex;
-                              align-items: stretch;
-                              flex-wrap: wrap;
-                              justify-content: center;
-                              padding: 10px;
-                              margin: 10px;
-                              background: #b3e2cd;
-                              font-size: 25px;
-                            }
-                            .level {
-                              display: grid;
-                              grid-template-rows: auto auto auto;
-                              column-gap: 5px;
-                              row-gap: 5px;
-                              padding: 5px;
-                              margin: 10px;
-                            }
-                            .level:nth-of-type(odd) {
-                                grid-template-columns: auto auto auto auto;
-                            }
-                            .level:nth-of-type(even) {
-                                grid-template-rows: auto auto auto auto;
-                            }
-                            div { background: #fee6ce;
-                            }
-                            
-                            div > div { background: #fdae6b;
-                            }
-                            
-                            div > div > div { background: #e6550d;
-                            }
-                            
-                            div > div > div > div { background: #efedf5;
-                            }
-                            
-                            div > div > div > div > div { background: #bcbddc;
-                            }
-                            
-                            div > div > div > div > div > div { background: #756bb1;
-                            }
-                            
-                            div > div > div > div > div > div > div { background: #e5f5e0;
-                            }
-                            
-                            div > div > div > div > div > div > div > div { background: #a1d99b;
-                            }
-                            </style>""")
+
         return line_list
 

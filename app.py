@@ -1,6 +1,6 @@
 from flask import Flask, render_template
-from MyObjects.svrf_model import SVRF
-# from MyObjects.svrf_model_full_depth_bool import SVRF
+# from MyObjects.svrf_model import SVRF
+from MyObjects.svrf_model_full_depth_bool import SVRF
 
 app = Flask(__name__)
 
@@ -21,8 +21,7 @@ def keyword_tree(kw):
     svrf.build_single_bool_tree()
     # svrf.print_bool_ops()
     lines = svrf.write_bool_to_list()
-
-    return '\n'.join(lines)
+    return render_template('boolean_tree.html', body_code='\n'.join(lines))
 
 
 if __name__ == '__main__':

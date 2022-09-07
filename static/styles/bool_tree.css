@@ -1,0 +1,92 @@
+.level_0 {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px;
+    background: #b3e2cd;
+    font-size: 25px;
+}
+
+.level {
+    display: grid;
+    grid-template-rows: auto auto auto auto auto auto auto auto;
+/ / column-gap: 5 px;
+/ / row-gap: 5 px;
+    margin: 10px;
+    border: 5px solid navy;
+
+}
+
+.level:nth-of-type(even) {
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+}
+
+.level:nth-of-type(odd) {
+    grid-template-rows: auto auto auto auto auto auto auto auto;
+}
+
+div {
+    background: #fee6ce;
+
+}
+
+div > div {
+    background: #fdae6b;
+}
+
+div > div > div {
+    background: #e6550d;
+}
+
+div > div > div > div {
+    background: #efedf5;
+}
+
+div > div > div > div > div {
+    background: #bcbddc;
+}
+
+div > div > div > div > div > div {
+    background: #756bb1;
+}
+
+div > div > div > div > div > div > div {
+    background: #e5f5e0;
+}
+
+div > div > div > div > div > div > div > div {
+    background: #a1d99b;
+}
+
+div > div > div > div > div > div > div > div > div {
+    background: #fee6ce;
+}
+
+div > div > div > div > div > div > div > div > div > div {
+    background: #fdae6b;
+}
+
+div > div > div > div > div > div > div > div > div > div > div {
+    background: #e6550d;
+}
+
+div > div > div > div > div > div > div > div > div > div > div > div {
+    background: #efedf5;
+}
+
+div > div > div > div > div > div > div > div > div > div > div > div > div {
+    background: #bcbddc;
+}
+
+div > div > div > div > div > div > div > div > div > div > div > div > div > div {
+    background: #756bb1;
+}
+
+div > div > div > div > div > div > div > div > div > div > div > div > div > div > div {
+    background: #e5f5e0;
+}
+
+div > div > div > div > div > div > div > div > div > div > div > div > div > div > div > div {
+    background: #a1d99b;
+}
