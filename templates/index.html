@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            font-size: 30px;
+            display: flex;
+            align-items: stretch;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 10px;
+            margin: 10px;
+            max-width: 650px;
+        }
+
+        div {
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            border: 3px solid navy;
+            background: aquamarine;
+        }
+
+        a {
+            color: navy;
+        }
+
+    </style>
+</head>
+<body>
+        {% for kw in kw_list %}
+            <div><a href={{ url_for('keyword_tree' ,kw=kw) }}> {{ kw.split('.')[0] }} </a></div>
+        {% endfor %}
+</body>
+
+</html>
