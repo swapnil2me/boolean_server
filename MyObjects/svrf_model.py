@@ -120,7 +120,7 @@ class SVRF:
 
     def build_bool_tree(self):
         operator_list = ['+', '-', '*', '/', 'INSIDE', 'OR', 'or', 'NOT', 'AND', 'SIZE', 'BY', 'INTERACT',
-                         'NOT-INTERACT','INSIDE','NOT-INSIDE','INTERNAL','EXPAND-EDGE','LESS-THAN']
+                         'NOT-INTERACT','INSIDE','NOT-INSIDE','INTERNAL','EXPAND-EDGE','EXPAND-EDGE-OUT-','LESS-THAN']
         var_dict = self.var_dict
         for var_name, var_expr in var_dict.items():
             if var_expr['is_bool']:
@@ -162,6 +162,9 @@ class SVRF:
                 if expr_spaced.startswith('COPY'):
                     expr_spaced = '_ ' + expr_spaced
                     operator_list.append('COPY')
+                if expr_spaced.startswith('EXTENTS'):
+                    expr_spaced = '_ ' + expr_spaced
+                    operator_list.append('EXTENTS')
 
                 expr_spaced = '( ' + expr_spaced + ' )'
                 # print((expr_spaced, operator_list))
@@ -268,7 +271,7 @@ class SVRF:
 
     def write_bool_to_list(self):
         var_dict = self.var_dict
-        line_list = ["<body class=level_0>"]
+        line_list = ["<div class=level_0>"]
         for var_name, var_expr in var_dict.items():
             if var_expr['is_bool']:
                 msg = "<div class=level> " + str(var_name) + ""
@@ -276,7 +279,7 @@ class SVRF:
                 print(msg)
                 write_tree_in_list(var_expr['expression_tree'], line_list, name=var_name)
                 line_list.append("</div>")
-        line_list.append("</body>")
+        line_list.append("</div>")
 
         return line_list
 
